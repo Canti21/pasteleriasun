@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&amp;display=swap" rel="stylesheet">
+    <title>Pasteleria Sun</title>
+    <style>
+        body
+        {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: rgb(247, 247, 247);
+        }
+
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid #a1a1a1;
+            background-color: #fcfcfc;
+        }
+
+        .menu
+        {
+            display: none;
+        }
+
+        .logo
+        {
+            width: 200px;
+        }
+
+        .navbar-left
+        {
+            display: flex;
+        }
+
+        .navbar-left ul
+        {
+            display: flex;
+            margin-left: 12px;
+        }
+
+        .navbar-left a
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left img
+        {
+            margin-right: 20px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a
+        {
+            text-decoration: none;
+            color: black;
+            border: 1px solid #fcfcfc;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover
+        {
+            border: 1px solid black;
+            color: black;
+            font-weight: bold;
+        }
+
+        .navbar-email
+        {
+            color: #a1a1a1;
+            font-size: 14px;
+        }
+
+        .navbar-shopping-cart
+        {
+            position: relative;
+        }
+
+        .navbar-shopping-cart div
+        {
+            width: 8px;
+            height: 8px;
+            background-color: #ACD9B2;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-section
+        {
+            padding: 0 30px;
+        }
+
+        .main-section h1
+        {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .form-container
+        {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 20px;
+        }
+
+        .title
+        {
+            font-size: 20px;
+            margin-bottom: 32px;
+            text-align: start;
+        }
+
+        .form
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 280px);
+        }
+
+        .form-section
+        {
+            display: grid;
+            justify-content: center;
+        }
+
+        .label
+        {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .input
+        {
+            background-color: white;
+            border: 1px solid #a1a1a1;
+            border-radius: 8px;
+            height: 32px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+
+        .input-name,
+        .input-email,
+        .input-phone
+        {
+            margin-bottom: 22px;
+        }
+
+        .primary-button
+        {
+            background-color: lightpink;
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 48px;
+        }
+
+        .my-order
+        {
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        .title
+        {
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+
+        .my-order-container
+        {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+
+        a
+        {
+            color: black;
+        }
+
+        .my-order-content
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .order 
+        {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 8px;
+            padding: 0 24px;
+        }
+
+        .order p:nth-child(1)
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .order p span:nth-child(1)
+        {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .order p span:nth-child(2)
+        {
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+
+        .order p:nth-child(2)
+        {
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .shopping-cart
+        {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+
+        .shopping-cart figure
+        {
+            margin: 0;
+        }
+
+        .shopping-cart figure img
+        {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .shopping-cart p:nth-child(2)
+        {
+            color: var(--very-light-pink);
+        }
+
+        .shopping-cart p:nth-child(3)
+        {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px)
+        {
+            .navbar-email
+            {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px)
+        {
+            .menu
+            {
+                display: block;
+            }
+
+            .navbar-left ul
+            {
+                display: none;
+            }
+
+            .navbar-shopping-cart
+            {
+                margin-right: 12px;
+            }
+
+            .navbar-email
+            {
+                display: none;
+            }
+            
+            .form
+            {
+                grid-template-columns: repeat(auto-fill, 280px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+        <div class="navbar-left">
+            <a href="./index.html">
+                <img src="./logos/logo-extended.svg" alt="logo" class="logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="./catalog.html">Catalogo</a>
+                </li>
+                <li>
+                    <a href="">Arma tu pastel</a>
+                </li>
+                <li>
+                    <a href="./about-us.html">Nosotros</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">email@example.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="main-section">
+        <h1 class="title">Tus Datos</h1>
+        <div class="form-section">
+            <div class="form-container">
+                <form action="/" class="form">
+                    <label for="name" class="label">Nombre</label>
+                    <input type="text" id="name" placeholder=" Tu nombre" class="input input-name" required>
+
+                    <label for="email" class="label">Dirección de email</label>
+                    <input type="email" id="email" placeholder=" email@ejemplo.com" class="input input-email" required>
+
+                    <label for="phone" class="label">Telefono</label>
+                    <input type="tel" id="phone" placeholder=" 1234567890" class="input input-phone" required>
+                    <div class="my-order">
+                        <div class="my-order-container">
+                            <h1 class="title">Tu orden</h1>
+                            <div class="my-order-content">
+                                <div class="order">
+                                    <p>
+                                        <span>04.25.21</span>
+                                        <span>6 articles</span>
+                                    </p>
+                                    <p>
+                                        $560,00
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="shopping-cart">
+                                <figure>
+                                    <img src="https://img-global.cpcdn.com/recipes/f5164a4bb1be1898/680x482cq70/bizcocho-de-chocolate-suave-y-esponjoso-foto-principal.webp" alt="Bizcocho sabor Chocolate">
+                                </figure>
+                                <p>Bizcocho sabor Chocolate</p>
+                                <p>$120</p>
+                            </div>
+                            <div class="shopping-cart">
+                                <figure>
+                                    <img src="https://i.pinimg.com/474x/94/e5/95/94e59597c34e3e2bb8b0ef3366afe874--beautiful-cakes-coffee-cake.jpg" alt="Cubierta de Café">
+                                </figure>
+                                <p>Cubierta de Café</p>
+                                <p>$160</p>
+                            </div>
+                            <div class="shopping-cart">
+                                <figure>
+                                    <img src="https://whereismyspoon.co/wp-content/uploads/2016/12/walnut-cake-caramelized.jpg" alt="Topping de Nueces">
+                                </figure>
+                                <p>Topping de Nueces</p>
+                                <p>$120</p>
+                            </div>
+                            <div class="shopping-cart">
+                                <figure>
+                                    <img src="http://3.bp.blogspot.com/-jTLBnjkb58A/UlRe5Rlq3xI/AAAAAAAAKxQ/ATQyMY2s0QE/s1600/almond+semolina+cake+(7).JPG" alt="Topping de Almendras">
+                                </figure>
+                                <p>Topping de Almendras</p>
+                                <p>$160</p>
+                            </div>
+                            <div class="shopping-cart">
+                                <figure>
+                                    <img src="https://i.ytimg.com/vi/cVASHBdGg6Q/maxresdefault.jpg" alt="Birutas de chocolate">
+                                </figure>
+                                <p>Birutas de Chocolate</p>
+                                <p>$120</p>
+                            </div>
+                            <div class="shopping-cart">
+                                <figure>
+                                    <img src="https://previews.123rf.com/images/betochagas/betochagas1308/betochagas130800121/21782035-brigadeiro-ein-brasilianischer-s%C3%BC%C3%9F-%C3%BCber-schokostreusel-.jpg" alt="Chispas de Chocolate">
+                                </figure>
+                                <p>Chispas de Chocolate</p>
+                                <p>$160</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./order-success.html">
+                        <button type="button" class="primary-button login-button">Enviar</button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

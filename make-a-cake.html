@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&amp;display=swap" rel="stylesheet">
+    <title>Pasteleria Sun</title>
+    <style>
+        body
+        {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: rgb(247, 247, 247);
+        }
+
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid #a1a1a1;
+            background-color: #fcfcfc;
+        }
+
+        .menu
+        {
+            display: none;
+        }
+
+        .logo
+        {
+            width: 200px;
+        }
+
+        .navbar-left
+        {
+            display: flex;
+        }
+
+        .navbar-left ul
+        {
+            display: flex;
+            margin-left: 12px;
+        }
+
+        .navbar-left a
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left img
+        {
+            margin-right: 20px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a
+        {
+            text-decoration: none;
+            color: black;
+            border: 1px solid #fcfcfc;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover
+        {
+            border: 1px solid black;
+            color: black;
+            font-weight: bold;
+        }
+
+        .navbar-email
+        {
+            color: #a1a1a1;
+            font-size: 14px;
+        }
+
+        .navbar-shopping-cart
+        {
+            position: relative;
+        }
+
+        .navbar-shopping-cart div
+        {
+            width: 8px;
+            height: 8px;
+            background-color: #ACD9B2;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-section
+        {
+            padding: 0 30px;
+            display: grid;
+        }
+
+        .main-section h1
+        {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .cards-container
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 240px);
+            gap: 26px;
+            place-content: center;
+            margin-top: 18px;
+        }
+
+        .product-card
+        {
+            width: 240px;
+        }
+
+        .product-card img
+        {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 1px solid #dfdfdf;
+        }
+
+        .product-info
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .product-info figure
+        {
+            margin: 0;
+        }
+
+        .product-info figure img
+        {
+            width: 35px;
+            height: 35px;
+        }
+
+        .product-info div p:nth-child(1)
+        {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        .product-info div p:nth-child(2)
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .send
+        {
+            display: grid;
+            justify-content: center;
+            padding: 60px 30px;
+        }
+
+        .primary-button
+        {
+            background-color: lightpink;
+            border-radius: 8px;
+            border: none;
+            width: 160%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            height: 48px;
+        }
+
+        @media (max-width: 700px)
+        {
+            .navbar-email
+            {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px)
+        {
+            .menu
+            {
+                display: block;
+            }
+
+            .navbar-left ul
+            {
+                display: none;
+            }
+
+            .navbar-shopping-cart
+            {
+                margin-right: 12px;
+            }
+
+            .navbar-email
+            {
+                display: none;
+            }
+            
+            .form
+            {
+                grid-template-columns: repeat(auto-fill, 280px);
+            }
+
+            .cards-container
+            {
+                grid-template-columns: repeat(auto-fill, 140px);
+            }
+
+            .product-card
+            {
+                width: 140px;
+            }
+
+            .product-card img
+            {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+        <div class="navbar-left">
+            <a href="./index.html">
+                <img src="./logos/logo-extended.svg" alt="logo" class="logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="./catalog.html">Catalogo</a>
+                </li>
+                <li>
+                    <a href="">Arma tu pastel</a>
+                </li>
+                <li>
+                    <a href="./about-us.html">Nosotros</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">email@example.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="main-section">        
+        <h1>Sabores de Bizcocho</h1>
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="https://www.cocinacaserayfacil.net/wp-content/uploads/2018/02/bizcocho-3-ingredientes.jpg" alt="Bizcocho Tradicional" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Tradicional</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://img-global.cpcdn.com/recipes/f5164a4bb1be1898/680x482cq70/bizcocho-de-chocolate-suave-y-esponjoso-foto-principal.webp" alt="Bizcocho sabor Chocolate" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Chocolate</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.queapetito.com/wp-content/uploads/2019/12/bizcocho-de-vainilla-esponjoso-600x469.jpg" alt="Bizcocho de Vainilla" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Vainilla</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://devainillaychocolate.files.wordpress.com/2015/03/bizcocho-fresa.jpg" alt="Bizcocho de Fresa" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Fresa</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.cubaneandoconmario.com/wp-content/uploads/2018/07/Bizcocho-de-pl%C3%A1tano7.jpg" alt="Bizcocho de Platano" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Platano</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.recetasdesbieta.com/wp-content/uploads/2021/04/bizcocho-limon-DESTACADA.jpg" alt="Bizcocho de Limon" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Limon</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <h1>Cubiertas</h1>
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="https://i2.wp.com/www.una-papa.com/wp-content/uploads/2014/10/glossy-ganache.jpg" alt="Cubierta de Chocolate" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Chocolate</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://recetinas.com/wp-content/uploads/2018/07/tarta-de-queso-con-fresa-y-lima.jpg" alt="Cubierta de Fresa" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Fresa</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.suspirospastelerias.com/files/files/350/products/vainilla-shake/vainilla-shake-closed.png" alt="Cubierta de Vainilla" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Vainilla</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/474x/94/e5/95/94e59597c34e3e2bb8b0ef3366afe874--beautiful-cakes-coffee-cake.jpg" alt="Cubierta de Café" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Café</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="http://assets.kraftfoods.com/recipe_images/opendeploy/95270_MXM_K564V3EC_OR1_OH_640x428.jpg" alt="Cubierta de Limon" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Limon</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://estoyhechouncocinillas.com/wp-content/uploads/2020/07/tarta-de-moras-sin-horno-con-gelatina.jpg" alt="Cobertura de Mora" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Mora</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <h1>Toppings</h1>
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Strawberry-Celebration-Cake_EXPS_FT20_46655_F_0716_1.jpg" alt="Topping de Fresas" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Fresas</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://whereismyspoon.co/wp-content/uploads/2016/12/walnut-cake-caramelized.jpg" alt="Topping de nueces" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Nueces</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="http://3.bp.blogspot.com/-jTLBnjkb58A/UlRe5Rlq3xI/AAAAAAAAKxQ/ATQyMY2s0QE/s1600/almond+semolina+cake+(7).JPG" alt="Topping de Almendras" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Almendras</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://media.istockphoto.com/photos/cake-with-fruit-topping-picture-id471454615" alt="Topping de frutos rojos" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Frutos Rojos</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://scontent.fpbc2-2.fna.fbcdn.net/v/t1.6435-9/122470204_3215611588549508_824621587930185151_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=0debeb&_nc_ohc=BMep7-BkiAcAX-7neF6&_nc_ht=scontent.fpbc2-2.fna&oh=00_AT8Rcxhx-tP5bUNu4vqJ4YR_fZ5GeztZ9rO_jEtt7Sz-_w&oe=625F78B6" alt="Topping de Chocolate" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Chocolates</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/3c/d4/72/3cd47201b134f131f0f1ad92363f5517--peach-cake-recipes-fun-recipes.jpg" alt="Topping de Durazno" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Duraznos</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <h1>Decoraciones</h1>
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="https://images-gmi-pmc.edge-generalmills.com/25505d98-5dbd-44d6-8b84-ff139f5cbf75.jpg" alt="Chispas" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Chispas</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://gastronomiaycia.republica.com/wp-content/uploads/2020/01/corazonfresachocolate1-680x495.jpg" alt="Corazones de fresas con chocolate" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Corazones de fresas cubiertas chocolate</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://i.ytimg.com/vi/cVASHBdGg6Q/maxresdefault.jpg" alt="Birutas de chocolate" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Birutas de chocolate</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://previews.123rf.com/images/betochagas/betochagas1308/betochagas130800121/21782035-brigadeiro-ein-brasilianischer-s%C3%BC%C3%9F-%C3%BCber-schokostreusel-.jpg" alt="Chispas de chocolate" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Chispas de chocolate</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_937517-MLM43806393682_102020-O.webp" alt="Letrero de Feliz Cumpleaños" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Letrero Feliz Cumpleaños</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.velasparapastel.top/wp-content/uploads/2018/11/Velas-magicas-pastel.jpeg" alt="Velas Magicas" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Velas magicas</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="send">
+            <a href="./order.html">
+                <button type="button" class="primary-button">Continuar</button>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
