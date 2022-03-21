@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&amp;display=swap" rel="stylesheet">
+    <title>Pasteleria Sun</title>
+    <style>
+        body
+        {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: white;
+        }
+
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid #a1a1a1;
+            background-color: #fcfcfc;
+        }
+
+        .menu
+        {
+            display: none;
+        }
+
+        .logo
+        {
+            width: 200px;
+        }
+
+        .navbar-left
+        {
+            display: flex;
+        }
+
+        .navbar-left ul
+        {
+            display: flex;
+            margin-left: 12px;
+        }
+
+        .navbar-left a
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left img
+        {
+            margin-right: 20px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a
+        {
+            text-decoration: none;
+            color: black;
+            border: 1px solid #fcfcfc;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover
+        {
+            border: 1px solid black;
+            color: black;
+            font-weight: bold;
+        }
+
+        .navbar-email
+        {
+            color: #a1a1a1;
+            font-size: 14px;
+        }
+
+        .navbar-shopping-cart
+        {
+            position: relative;
+        }
+
+        .navbar-shopping-cart div
+        {
+            width: 8px;
+            height: 8px;
+            background-color: #ACD9B2;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-section
+        {
+            padding: 0 30px;
+        }
+
+        .main-section h1
+        {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .cards-container
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+            gap: 26px;
+            place-content: center;
+            margin-top: 18px;
+        }
+
+        .product-card
+        {
+            width: 240px;
+        }
+
+        .product-card img
+        {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .product-info
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .product-info figure
+        {
+            margin: 0;
+        }
+
+        .product-info figure img
+        {
+            width: 35px;
+            height: 35px;
+        }
+
+        .product-info div p:nth-child(1)
+        {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        .product-info div p:nth-child(2)
+        {
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+        }
+
+        @media (max-width: 700px)
+        {
+            .navbar-email
+            {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px)
+        {
+            .menu
+            {
+                display: block;
+            }
+
+            .navbar-left ul
+            {
+                display: none;
+            }
+
+            .navbar-shopping-cart
+            {
+                margin-right: 12px;
+            }
+
+            .navbar-email
+            {
+                display: none;
+            }
+
+            .banner
+            {
+                height: 320px;
+            }
+
+            .main-logo img
+            {
+                width: 240px;
+            }
+
+            .main-logo h1
+            {
+                font-size: 32px;
+            }
+
+            .cards-container
+            {
+                grid-template-columns: repeat(auto-fill, 140px);
+            }
+
+            .product-card
+            {
+                width: 140px;
+            }
+
+            .product-card img
+            {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+        <div class="navbar-left">
+            <a href="./index.html">
+                <img src="./logos/logo-extended.svg" alt="logo" class="logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="/">Catalogo</a>
+                </li>
+                <li>
+                    <a href="">Arma tu pastel</a>
+                </li>
+                <li>
+                    <a href="./about-us.html">Nosotros</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">email@example.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="main-section">
+        <h1>Nuestros pasteles</h1>
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="https://madus.com.np/wp-content/uploads/2020/12/Chocolate-cake-recipe-1200a.jpg" alt="Pastel de Chocolate Triple" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Chocolate de Triple Capa</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/11/5b/4e/82/pastel-de-durazno.jpg" alt="Pastel de Durazno" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de durazno y vainilla</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://pasteleriasmarisa.com.mx/dyn/wp-content/uploads/2015/07/pastel-tres-leches-2.jpg" alt="Pastel Tres Leches" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel Tres Leches</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://d1nsq2txwd94q7.cloudfront.net/public/files/production/recipes/images/4041/thumb/r_4041_1550830207.jpg" alt="Pastel de Zanahoria" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Zanahoria</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://muttamblingagifts.com/wp-content/uploads/2021/04/Fresh-Strawberry-Cake-with-Strawberry-Frosting-3-510x342.jpg" alt="Pastel de Fresas" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Fresas</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://elgourmet.s3.amazonaws.com/recetas/cover/torta_Wk8PuOpz1Jl6D3KARHjErity4YwfVm.png" alt="Pastel de Chocolate Con Café" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Chocolate con Café</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0279/8151/2798/products/10_3_1024x1024.jpg?v=1634229225" alt="Pastel Napolitano" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel Napolitano</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Pastel de Cereza y Vainilla" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Cereza y Vainilla</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.chedraui.com.mx/medias/2353426-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8Mjc2OTIyfGltYWdlL2pwZWd8aDJkL2g4Ni85OTM3MzUyMzI3MTk4LmpwZ3wzZDI1NDllY2U0OGQ0Zjc0MDcxODZlNmRkMGEzNzk5MGVkOTU1MGQwMDBlZDZjMTA1MTM5ZDA0OGE4NmYxMWI2" alt="Pastel de Oreo" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel Oreo Tres Leches</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://t1.rg.ltmcdn.com/es/posts/1/4/9/cheesecake_de_frutos_rojos_73941_600.jpg" alt="Pastel de Frutos Rojos" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Frutos Rojos</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/264939/pexels-photo-264939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Pastel de Limon" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Limon</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.suqiee.com.mx/wp-content/uploads/2017/05/instagram-pastel-de-platano-5.jpg" alt="Pastel de Platano" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Pastel de Platano</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
