@@ -1,6 +1,6 @@
 # Pasteleria Sun 🎂
 ---
-Maquetación de un sitio para una pasteleria 🍰
+Maquetación de un sitio para una pasteleria 🍰  
 Disponible aqui:
 
 ## Cliente
