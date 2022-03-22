@@ -93,31 +93,11 @@
             font-size: 14px;
         }
 
-        .navbar-shopping-cart
-        {
-            position: relative;
-        }
-
-        .navbar-shopping-cart div
-        {
-            width: 8px;
-            height: 8px;
-            background-color: #ACD9B2;
-            border-radius: 50%;
-            font-size: 14px;
-            font-weight: bold;
-            position: absolute;
-            top: -6px;
-            right: -3px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         .main-section
         {
             padding: 0 30px;
             display: grid;
+            margin-bottom: 20px;
         }
 
         .main-section h1
@@ -157,17 +137,6 @@
             margin-top: 12px;
         }
 
-        .product-info figure
-        {
-            margin: 0;
-        }
-
-        .product-info figure img
-        {
-            width: 35px;
-            height: 35px;
-        }
-
         .product-info div p:nth-child(1)
         {
             font-weight: bold;
@@ -180,13 +149,6 @@
         {
             margin-top: 0;
             margin-bottom: 0;
-        }
-
-        .send
-        {
-            display: grid;
-            justify-content: center;
-            padding: 60px 30px;
         }
 
         .primary-button
@@ -219,11 +181,6 @@
             .navbar-left ul
             {
                 display: none;
-            }
-
-            .navbar-shopping-cart
-            {
-                margin-right: 12px;
             }
 
             .navbar-email
@@ -263,99 +220,197 @@
             </a>
             <ul>
                 <li>
-                    <a href="./catalog.html">Catalogo</a>
+                    <a href="./invertory.html">Inventario</a>
                 </li>
                 <li>
-                    <a href="">Arma tu pastel</a>
+                    <a href="./orders.html">Pedidos</a>
                 </li>
                 <li>
-                    <a href="./about-us.html">Nosotros</a>
+                    <a href="./my-account.html">Mi cuenta</a>
                 </li>
             </ul>
         </div>
         <div class="navbar-right">
             <ul>
                 <li class="navbar-email">email@example.com</li>
-                <li class="navbar-shopping-cart">
-                    <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart">
-                    <div>2</div>
-                </li>
             </ul>
         </div>
     </nav>
-    <section class="main-section">        
+    <section class="main-section">       
+        <h1>Pasteles</h1>
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="https://madus.com.np/wp-content/uploads/2020/12/Chocolate-cake-recipe-1200a.jpg" alt="Pastel de Chocolate Triple" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Chocolate de Triple Capa</p>
+                        <p>5 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/11/5b/4e/82/pastel-de-durazno.jpg" alt="Pastel de Durazno" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de durazno y vainilla</p>
+                        <p>8 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://pasteleriasmarisa.com.mx/dyn/wp-content/uploads/2015/07/pastel-tres-leches-2.jpg" alt="Pastel Tres Leches" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel Tres Leches</p>
+                        <p>9 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://d1nsq2txwd94q7.cloudfront.net/public/files/production/recipes/images/4041/thumb/r_4041_1550830207.jpg" alt="Pastel de Zanahoria" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Zanahoria</p>
+                        <p>2 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://muttamblingagifts.com/wp-content/uploads/2021/04/Fresh-Strawberry-Cake-with-Strawberry-Frosting-3-510x342.jpg" alt="Pastel de Fresas" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Fresas</p>
+                        <p>3 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://elgourmet.s3.amazonaws.com/recetas/cover/torta_Wk8PuOpz1Jl6D3KARHjErity4YwfVm.png" alt="Pastel de Chocolate Con Café" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Chocolate con Café</p>
+                        <p>5 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0279/8151/2798/products/10_3_1024x1024.jpg?v=1634229225" alt="Pastel Napolitano" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel Napolitano</p>
+                        <p>9 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Pastel de Cereza y Vainilla" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Cereza y Vainilla</p>
+                        <p>1 pieza restante</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.chedraui.com.mx/medias/2353426-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8Mjc2OTIyfGltYWdlL2pwZWd8aDJkL2g4Ni85OTM3MzUyMzI3MTk4LmpwZ3wzZDI1NDllY2U0OGQ0Zjc0MDcxODZlNmRkMGEzNzk5MGVkOTU1MGQwMDBlZDZjMTA1MTM5ZDA0OGE4NmYxMWI2" alt="Pastel de Oreo" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel Oreo Tres Leches</p>
+                        <p>3 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://t1.rg.ltmcdn.com/es/posts/1/4/9/cheesecake_de_frutos_rojos_73941_600.jpg" alt="Pastel de Frutos Rojos" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Frutos Rojos</p>
+                        <p>9 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/264939/pexels-photo-264939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Pastel de Limon" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Limon</p>
+                        <p>11 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://www.suqiee.com.mx/wp-content/uploads/2017/05/instagram-pastel-de-platano-5.jpg" alt="Pastel de Platano" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Pastel de Platano</p>
+                        <p>2 piezas restantes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h1>Sabores de Bizcocho</h1>
         <div class="cards-container">
             <div class="product-card">
                 <img src="https://www.cocinacaserayfacil.net/wp-content/uploads/2018/02/bizcocho-3-ingredientes.jpg" alt="Bizcocho Tradicional" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Tradicional</p>
+                        <p>22 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://img-global.cpcdn.com/recipes/f5164a4bb1be1898/680x482cq70/bizcocho-de-chocolate-suave-y-esponjoso-foto-principal.webp" alt="Bizcocho sabor Chocolate" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Chocolate</p>
+                        <p>9 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://cdn.queapetito.com/wp-content/uploads/2019/12/bizcocho-de-vainilla-esponjoso-600x469.jpg" alt="Bizcocho de Vainilla" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Vainilla</p>
+                        <p>10 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://devainillaychocolate.files.wordpress.com/2015/03/bizcocho-fresa.jpg" alt="Bizcocho de Fresa" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Fresa</p>
+                        <p>21 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://www.cubaneandoconmario.com/wp-content/uploads/2018/07/Bizcocho-de-pl%C3%A1tano7.jpg" alt="Bizcocho de Platano" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Platano</p>
+                        <p>10 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://www.recetasdesbieta.com/wp-content/uploads/2021/04/bizcocho-limon-DESTACADA.jpg" alt="Bizcocho de Limon" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Limon</p>
+                        <p>7 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="http://2.bp.blogspot.com/-73urd8odsBg/TjXU0NdmRoI/AAAAAAAAAUQ/TNZA7xY9EPw/s1600/DSC_0133.JPG" alt="Bizcocho de Café" class="product-img">
+                <div class="product-info">
+                    <div>
+                        <p>Café</p>
+                        <p>AGOTADO</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -365,72 +420,54 @@
                 <img src="https://i2.wp.com/www.una-papa.com/wp-content/uploads/2014/10/glossy-ganache.jpg" alt="Cubierta de Chocolate" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Chocolate</p>
+                        <p>5 restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://recetinas.com/wp-content/uploads/2018/07/tarta-de-queso-con-fresa-y-lima.jpg" alt="Cubierta de Fresa" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Fresa</p>
+                        <p>1 restante</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://www.suspirospastelerias.com/files/files/350/products/vainilla-shake/vainilla-shake-closed.png" alt="Cubierta de Vainilla" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Vainilla</p>
+                        <p>4 restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://i.pinimg.com/474x/94/e5/95/94e59597c34e3e2bb8b0ef3366afe874--beautiful-cakes-coffee-cake.jpg" alt="Cubierta de Café" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Café</p>
+                        <p>13 restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="http://assets.kraftfoods.com/recipe_images/opendeploy/95270_MXM_K564V3EC_OR1_OH_640x428.jpg" alt="Cubierta de Limon" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Limon</p>
+                        <p>3 restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://estoyhechouncocinillas.com/wp-content/uploads/2020/07/tarta-de-moras-sin-horno-con-gelatina.jpg" alt="Cobertura de Mora" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Mora</p>
+                        <p>7 restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
         </div>
@@ -440,72 +477,54 @@
                 <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Strawberry-Celebration-Cake_EXPS_FT20_46655_F_0716_1.jpg" alt="Topping de Fresas" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Fresas</p>
+                        <p>5 raciones restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://whereismyspoon.co/wp-content/uploads/2016/12/walnut-cake-caramelized.jpg" alt="Topping de nueces" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Nueces</p>
+                        <p>19 raciones restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="http://3.bp.blogspot.com/-jTLBnjkb58A/UlRe5Rlq3xI/AAAAAAAAKxQ/ATQyMY2s0QE/s1600/almond+semolina+cake+(7).JPG" alt="Topping de Almendras" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Almendras</p>
+                        <p>8 raciones restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://media.istockphoto.com/photos/cake-with-fruit-topping-picture-id471454615" alt="Topping de frutos rojos" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Frutos Rojos</p>
+                        <p>4 raciones restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://scontent.fpbc2-2.fna.fbcdn.net/v/t1.6435-9/122470204_3215611588549508_824621587930185151_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=0debeb&_nc_ohc=BMep7-BkiAcAX-7neF6&_nc_ht=scontent.fpbc2-2.fna&oh=00_AT8Rcxhx-tP5bUNu4vqJ4YR_fZ5GeztZ9rO_jEtt7Sz-_w&oe=625F78B6" alt="Topping de Chocolate" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Chocolates</p>
+                        <p>12 raciones restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://i.pinimg.com/736x/3c/d4/72/3cd47201b134f131f0f1ad92363f5517--peach-cake-recipes-fun-recipes.jpg" alt="Topping de Durazno" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Duraznos</p>
+                        <p>1 Ración restante</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
         </div>
@@ -515,79 +534,56 @@
                 <img src="https://images-gmi-pmc.edge-generalmills.com/25505d98-5dbd-44d6-8b84-ff139f5cbf75.jpg" alt="Chispas" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
-                        <p>Chispas</p>
+                        <p>Chispitas</p>
+                        <p>5 paquetes restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://gastronomiaycia.republica.com/wp-content/uploads/2020/01/corazonfresachocolate1-680x495.jpg" alt="Corazones de fresas con chocolate" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
-                        <p>Corazones de fresas cubiertas chocolate</p>
+                        <p>Corazones de fresas cubiertas de chocolate</p>
+                        <p>74 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://i.ytimg.com/vi/cVASHBdGg6Q/maxresdefault.jpg" alt="Birutas de chocolate" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
-                        <p>Birutas de chocolate</p>
+                        <p>Birutas de Chocolate</p>
+                        <p>23 raciones restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://previews.123rf.com/images/betochagas/betochagas1308/betochagas130800121/21782035-brigadeiro-ein-brasilianischer-s%C3%BC%C3%9F-%C3%BCber-schokostreusel-.jpg" alt="Chispas de chocolate" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Chispas de chocolate</p>
+                        <p>4 paquetes restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://http2.mlstatic.com/D_NQ_NP_937517-MLM43806393682_102020-O.webp" alt="Letrero de Feliz Cumpleaños" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Letrero Feliz Cumpleaños</p>
+                        <p>2 piezas restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
             <div class="product-card">
                 <img src="https://www.velasparapastel.top/wp-content/uploads/2018/11/Velas-magicas-pastel.jpeg" alt="Velas Magicas" class="product-img">
                 <div class="product-info">
                     <div>
-                        <p>$120,00</p>
                         <p>Velas magicas</p>
+                        <p>4 Paquetes restantes</p>
                     </div>
-                    <figure>
-                        <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
-                    </figure>
                 </div>
             </div>
-        </div>
-        <div class="send">
-            <a href="./order.html">
-                <button type="button" class="primary-button">Continuar</button>
-            </a>
         </div>
     </section>
 </body>

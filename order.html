@@ -190,6 +190,7 @@
             font-size: var(--md);
             font-weight: bold;
             height: 48px;
+            margin-top: 20px;
         }
 
         .my-order
@@ -201,7 +202,6 @@
 
         .title
         {
-            font-size: var(--lg);
             margin-bottom: 40px;
         }
 
@@ -229,7 +229,7 @@
             grid-template-columns: auto 1fr;
             gap: 16px;
             align-items: center;
-            background-color: var(--text-input-field);
+            background-color: white;
             margin-bottom: 24px;
             border-radius: 8px;
             padding: 0 24px;
@@ -243,14 +243,7 @@
 
         .order p span:nth-child(1)
         {
-            font-size: var(--md);
             font-weight: bold;
-        }
-
-        .order p span:nth-child(2)
-        {
-            font-size: var(--sm);
-            color: var(--very-light-pink);
         }
 
         .order p:nth-child(2)
@@ -281,23 +274,20 @@
             object-fit: cover;
         }
 
-        .shopping-cart p:nth-child(2)
-        {
-            color: var(--very-light-pink);
-        }
-
         .shopping-cart p:nth-child(3)
         {
-            font-size: var(--md);
             font-weight: bold;
         }
 
-        @media (max-width: 700px)
+        textarea
         {
-            .navbar-email
-            {
-                display: none;
-            }
+            resize: none;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            padding: 5px;
+            outline: none;
+            border: 1px solid lightgray;
+            border-radius: 8px;
         }
 
         @media (max-width: 640px)
@@ -315,11 +305,6 @@
             .navbar-shopping-cart
             {
                 margin-right: 12px;
-            }
-
-            .navbar-email
-            {
-                display: none;
             }
             
             .form
@@ -350,7 +335,6 @@
         </div>
         <div class="navbar-right">
             <ul>
-                <li class="navbar-email">email@example.com</li>
                 <li class="navbar-shopping-cart">
                     <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart">
                     <div>2</div>
@@ -429,6 +413,8 @@
                             </div>
                         </div>
                     </div>
+                    <h1>Comentarios Adicionales</h1>
+                    <textarea id="comments" name="Comentarios Adicionales" rows="10"></textarea>
                     <input type="submit" value="Enviar" class="primary-button login-button">
                 </form>
             </div>
